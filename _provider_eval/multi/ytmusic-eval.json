@@ -1,0 +1,83 @@
+{
+  "provider": "node-youtube-music",
+  "tests": [
+    {
+      "name": "songs:Shreya Ghoshal",
+      "ok": false,
+      "ms": 515,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Arijit Singh",
+      "ok": false,
+      "ms": 137,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Arjit Singh",
+      "ok": false,
+      "ms": 163,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Sonu Nigam",
+      "ok": false,
+      "ms": 148,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Kesariya",
+      "ok": false,
+      "ms": 168,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Tum Hi Ho",
+      "ok": false,
+      "ms": 136,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Believer",
+      "ok": false,
+      "ms": 203,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "songs:Hindi Sad Songs",
+      "ok": false,
+      "ms": 172,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "artists:Shreya Ghoshal",
+      "ok": false,
+      "ms": 140,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "artistDetail:Shreya",
+      "ok": false,
+      "ms": 163,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "albums:Shreya Ghoshal",
+      "ok": false,
+      "ms": 139,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "albumTracks",
+      "ok": false,
+      "ms": 123,
+      "error": "Response code 404 (Not Found)"
+    },
+    {
+      "name": "playlists:Bollywood Romantic",
+      "ok": false,
+      "ms": 186,
+      "error": "Response code 404 (Not Found)"
+    }
+  ]
+}

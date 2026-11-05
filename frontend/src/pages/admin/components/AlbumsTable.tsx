@@ -51,7 +51,7 @@ const AlbumsTable = () => {
             <TableCell>
               <span className="inline-flex items-center gap-1 text-zinc-400">
                 <Music className="h-4 w-4" />
-                {album.songs.length} songs
+                {(album.songs?.length || 0)} songs
               </span>
             </TableCell>
             <TableCell className="text-right">
@@ -59,7 +59,7 @@ const AlbumsTable = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => deleteAlbum(album._id)}
+                  onClick={() => album._id && deleteAlbum(album._id)}
                   className="text-red-400 hover:text-red-300 hover:bg-red-400/10"
                 >
                   <Trash2 className="h-4 w-4" />

@@ -1,92 +1,75 @@
-import express from "express";
 import dotenv from "dotenv";
-import { clerkMiddleware } from "@clerk/express";
-import fileUpload from "express-fileupload";
-import path from "path";
 import { createServer } from "http";
-import cors from "cors";
-import cron from "node-cron";
-import fs from "fs";
-
 import { connectDB } from "./lib/db.js";
 import { initializeSocket } from "./lib/socket.js";
-import userRoutes from "./routes/user.route.js";
-import authRoutes from "./routes/auth.route.js";
-import adminRoutes from "./routes/admin.route.js";
-import songRoutes from "./routes/song.route.js";
-import albumRoutes from "./routes/album.route.js";
-import statsRoutes from "./routes/stat.route.js";
-import searchRoutes from "./routes/search.route.js";
+import { getAllowedOrigins } from "./lib/corsOrigins.js";
+import {
+  getJioSaavnBaseUrl,
+  JIOSAAVN_CLOUD_DEFAULT,
+} from "./services/music/jiosaavn.client.js";
+import { canAttemptJioSaavnFullPlayback } from "./services/music/providerCapabilities.js";
+import { createApp } from "./app.js";
 
-dotenv.config();
+const dotenvResult = dotenv.config();
+// Prefer PORT from .env so a shell leftover like JioSaavn PORT=3099 cannot steal the API port
+const PORT =
+  Number(dotenvResult.parsed?.PORT) || Number(process.env.PORT) || 8080;
 
-const __dirname = path.resolve();
-const app = express();
-const PORT = process.env.PORT;
-
+const app = createApp();
 const httpServer = createServer(app);
 initializeSocket(httpServer);
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  }),
-);
-
-app.use(express.json());
-app.use(clerkMiddleware());
-app.use(
-  fileUpload({
-    useTempFiles: true,
-    tempFileDir: path.join(__dirname, "tmp"),
-    createParentPath: true,
-    limits: {
-      fileSize: 10 * 1024 * 1024,
-    },
-  }),
-);
-
-const tempDir = path.join(process.cwd(), "tmp");
-cron.schedule("0 * * * *", () => {
-  if (fs.existsSync(tempDir)) {
-    fs.readdir(tempDir, (err, files) => {
-      if (err) {
-        console.log("error", err);
-        return;
-      }
-      for (const file of files) {
-        fs.unlink(path.join(tempDir, file), (err) => {});
-      }
-    });
-  }
-});
-
-app.use("/api/users", userRoutes);
-app.use("/api/auth", authRoutes);
-app.use("/api/admin", adminRoutes);
-app.use("/api/songs", songRoutes);
-app.use("/api/albums", albumRoutes);
-app.use("/api/stats", statsRoutes);
-app.use("/api/search", searchRoutes);
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/dist")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend", "dist", "index.html"));
-  });
-}
-
-app.use((err, req, res, next) =>
-  res.status(500).json({
-    message:
-      process.env.NODE_ENV === "production"
-        ? "Internal Server Error"
-        : err.message,
-  }),
-);
-
-httpServer.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const server = httpServer.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running on port ${PORT} (0.0.0.0)`);
+  console.log(`CORS allow-list: ${getAllowedOrigins().join(", ")}`);
   connectDB();
+
+  const jiosaavnBase = getJioSaavnBaseUrl();
+  const isProd =
+    String(process.env.NODE_ENV || "").toLowerCase() === "production";
+
+  if (isProd) {
+    if (!canAttemptJioSaavnFullPlayback()) {
+      console.error(
+        "[providers] FATAL for full catalog: set JIOSAAVN_AUTHORIZED=true on Airtel Cloud / production",
+      );
+    }
+    if (/localhost|127\.0\.0\.1/i.test(jiosaavnBase)) {
+      console.error(
+        `[providers] Refusing localhost Jio URL in production — using ${JIOSAAVN_CLOUD_DEFAULT}`,
+      );
+    }
+  }
+
+  // Prefer /health — cloud hosts may return 5xx on bare "/"
+  const jiosaavnHealth = `${jiosaavnBase.replace(/\/$/, "")}/health`;
+  fetch(jiosaavnHealth)
+    .then((r) => {
+      if (!r.ok && r.status >= 500) {
+        console.warn(
+          `[providers] JioSaavn sidecar unhealthy at ${jiosaavnBase} (${r.status}) — catalog may degrade`,
+        );
+      } else {
+        console.log(`[providers] JioSaavn sidecar reachable at ${jiosaavnBase}`);
+      }
+    })
+    .catch(() => {
+      console.warn(
+        `[providers] JioSaavn sidecar UNREACHABLE at ${jiosaavnBase} — song search uses Audius/Jamendo full streams only (no 30s previews)`,
+      );
+    });
 });
+
+const shutdown = (signal) => {
+  console.log(`[shutdown] ${signal} received — closing HTTP server`);
+  server.close(() => {
+    console.log("[shutdown] HTTP server closed");
+    process.exit(0);
+  });
+  setTimeout(() => process.exit(1), 10_000).unref();
+};
+
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));
+
+export { app, server };

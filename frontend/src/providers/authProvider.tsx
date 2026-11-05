@@ -1,9 +1,10 @@
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance, setAuthTokenGetter } from "@/lib/axios";
 import { useAuth } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
 import { Loader } from "lucide-react";
 import { useAuthStore } from "@/stores/useAuthStore";
 import { useChatStore } from "@/stores/useChatStore";
+import { useLibraryStore } from "@/stores/useLibraryStore";
 
 const updateApiToken = (token: string | null) => {
   if (token) {
@@ -14,10 +15,24 @@ const updateApiToken = (token: string | null) => {
 };
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const { getToken, userId } = useAuth();
+  const { getToken, userId, isSignedIn } = useAuth();
   const [loading, setLoading] = useState(true);
   const { checkAdminStatus } = useAuthStore();
   const { initSocket, disconnectSocket } = useChatStore();
+  const { fetchFavorites, syncLocalFavoritesToServer } = useLibraryStore();
+
+  useEffect(() => {
+    setAuthTokenGetter(async () => {
+      try {
+        return (await getToken()) || null;
+      } catch {
+        return null;
+      }
+    });
+
+    return () => setAuthTokenGetter(null);
+  }, [getToken]);
+
   useEffect(() => {
     const initAuth = async () => {
       try {
@@ -26,10 +41,15 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         if (token) {
           await checkAdminStatus();
           if (userId) initSocket(userId);
+          await syncLocalFavoritesToServer();
+          await fetchFavorites();
+        } else {
+          await fetchFavorites();
         }
       } catch (error) {
         updateApiToken(null);
         console.log("Error in Auth Provider", error);
+        await fetchFavorites();
       } finally {
         setLoading(false);
       }
@@ -37,7 +57,16 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     initAuth();
     return () => disconnectSocket();
-  }, [getToken, userId, checkAdminStatus, initSocket, disconnectSocket]);
+  }, [
+    getToken,
+    userId,
+    isSignedIn,
+    checkAdminStatus,
+    initSocket,
+    disconnectSocket,
+    fetchFavorites,
+    syncLocalFavoritesToServer,
+  ]);
 
   if (loading)
     return (

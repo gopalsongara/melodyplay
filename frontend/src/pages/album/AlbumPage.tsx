@@ -22,21 +22,23 @@ const AlbumPage = () => {
 
   if (isLoading) return null;
 
+  const songs = currentAlbum?.songs || [];
+
   const handlePlayAlbum = () => {
-    if (!currentAlbum) return;
-    const isCurrentAlbumPlaying = currentAlbum?.songs.some(
+    if (!currentAlbum || !songs.length) return;
+    const isCurrentAlbumPlaying = songs.some(
       (song) => song._id === currentSong?._id,
     );
     if (isCurrentAlbumPlaying) {
       togglePlay();
     } else {
-      playAt(currentAlbum?.songs, 0);
+      playAt(songs, 0);
     }
   };
 
   const handlePlaySong = (index: number) => {
-    if (!currentAlbum) return;
-    playAt(currentAlbum?.songs, index);
+    if (!songs.length) return;
+    playAt(songs, index);
   };
   return (
     <div className="h-full ">
@@ -62,7 +64,7 @@ const AlbumPage = () => {
                   <span className="font-medium text-white">
                     {currentAlbum?.artist}
                   </span>
-                  <span>{currentAlbum?.songs.length} songs</span>
+                  <span>{songs.length} songs</span>
                   <span>• {currentAlbum?.artist}</span>
                   <span>• {currentAlbum?.releaseDate}</span>
                 </div>
@@ -76,9 +78,7 @@ const AlbumPage = () => {
                 className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-400 hover:scale-105 transition-all"
               >
                 {isPlaying &&
-                currentAlbum?.songs.some(
-                  (song) => song._id === currentSong?._id,
-                ) ? (
+                songs.some((song) => song._id === currentSong?._id) ? (
                   <Pause className="h-7 w-7 text-black" />
                 ) : (
                   <Play className="h-7 w-7 text-black" />
@@ -101,7 +101,7 @@ const AlbumPage = () => {
 
               <div className="px-6">
                 <div className="space-y-2 py-4">
-                  {currentAlbum?.songs.map((song, index) => {
+                  {songs.map((song, index) => {
                     const isCurrentSong = currentSong?._id === song._id;
                     return (
                       <div
@@ -135,7 +135,7 @@ const AlbumPage = () => {
                           </div>
                         </div>
                         <div className="flex items-center">
-                          {song.createdAt.split("T")[0]}
+                          {song.createdAt?.split("T")[0] || "—"}
                         </div>
                         <div className="flex items-center">
                           {formatDuration(song.duration)}

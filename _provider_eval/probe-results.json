@@ -1,0 +1,79 @@
+[
+  {
+    "name": "jio_local_health",
+    "ok": false,
+    "ms": 82,
+    "error": "fetch failed"
+  },
+  {
+    "name": "jio_search_songs",
+    "ok": false,
+    "ms": 3,
+    "error": "fetch failed"
+  },
+  {
+    "name": "jio_search_albums",
+    "ok": false,
+    "ms": 3,
+    "error": "fetch failed"
+  },
+  {
+    "name": "jio_search_artists",
+    "ok": false,
+    "ms": 3,
+    "error": "fetch failed"
+  },
+  {
+    "name": "saya_audius_search",
+    "ok": true,
+    "ms": 4164,
+    "sample": {
+      "count": 2,
+      "title": "Daydream Believer",
+      "art": {
+        "150x150": "https://cn2.mainnet.audiusindex.org/content/01JQS05H1H3MDEGJVSQGBQ6FP4/150x150.jpg",
+        "480x480": "https://cn2.mainnet.audiusindex.org/content/01JQS05H1H3MDEGJVSQGBQ6FP4/480x480.jpg",
+        "1000x1000": "https://cn2.mainnet.audiusindex.org/content/01JQS05H1H3MDEGJVSQGBQ6FP4/1000x1000.jpg",
+        "mirrors": [
+          "https://val011.open-audio-validator.com",
+          "https://v.monophonic.digital",
+          "https://val008.open-audio-validator.com"
+        ]
+      }
+    }
+  },
+  {
+    "name": "saya_apple_search",
+    "ok": true,
+    "ms": 602,
+    "sample": {
+      "count": 0
+    }
+  },
+  {
+    "name": "nepotune_public_search",
+    "ok": false,
+    "ms": 498,
+    "error": "HTTP 402"
+  },
+  {
+    "name": "shnwaz_public_search",
+    "ok": false,
+    "ms": 111,
+    "error": "fetch failed"
+  },
+  {
+    "name": "musicbrainz_release",
+    "ok": false,
+    "ms": 2106,
+    "error": "HTTP 403"
+  },
+  {
+    "name": "coverart_probe",
+    "ok": true,
+    "ms": 0,
+    "sample": {
+      "note": "use MBID from musicbrainz when available"
+    }
+  }
+]

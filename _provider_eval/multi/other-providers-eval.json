@@ -1,0 +1,172 @@
+[
+  {
+    "name": "shnwaz_gaana_health",
+    "ok": false,
+    "ms": 844,
+    "error": "HTTP 402 {\"error\": {\"code\": \"402\", \"message\": \"Payment required\"}}"
+  },
+  {
+    "name": "shnwaz_gaana_search_shreya",
+    "ok": false,
+    "ms": 602,
+    "error": "HTTP 402 {\"error\": {\"code\": \"402\", \"message\": \"Payment required\"}}"
+  },
+  {
+    "name": "shnwaz_gaana_search_artist",
+    "ok": false,
+    "ms": 416,
+    "error": "HTTP 402 {\"error\": {\"code\": \"402\", \"message\": \"Payment required\"}}"
+  },
+  {
+    "name": "shnwaz_gaana_album",
+    "ok": false,
+    "ms": 382,
+    "error": "HTTP 402 {\"error\": {\"code\": \"402\", \"message\": \"Payment required\"}}"
+  },
+  {
+    "name": "notdelta_health_https://gaana-api.vercel.app/api",
+    "ok": false,
+    "ms": 1822,
+    "error": "HTTP 404 {\"error\": {\"code\": \"404\", \"message\": \"The page could not be found\"}}"
+  },
+  {
+    "name": "notdelta_health_https://gaana-api-notdeltaxd.vercel.app/api",
+    "ok": false,
+    "ms": 451,
+    "error": "HTTP 404 {\"error\": {\"code\": \"404\", \"message\": \"The deployment could not be found on Vercel.\"}}"
+  },
+  {
+    "name": "itunes_songs_shreya",
+    "ok": true,
+    "ms": 0,
+    "count": 25,
+    "relevant": 25,
+    "sample": [
+      {
+        "t": "KALYANI (Remix)",
+        "a": "ARJN, KDS, FIFTY4 & Shreya Ghoshal"
+      },
+      {
+        "t": "Dhadak Title Track",
+        "a": "Ajay Gogavale & Shreya Ghoshal"
+      },
+      {
+        "t": "Andangakka - Unplugged Vocals",
+        "a": "Harris Jayaraj, Vairamuthu, Jessie Gift, Kay Kay, Shreya Ghoshal & Saindhavi"
+      },
+      {
+        "t": "Thodi Si Daaru",
+        "a": "AP Dhillon & Shreya Ghoshal"
+      },
+      {
+        "t": "Saiyaara Reprise - Female",
+        "a": "Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Shreya Ghoshal & Irshad Kamil"
+      }
+    ]
+  },
+  {
+    "name": "itunes_albums_shreya",
+    "ok": true,
+    "ms": 0,
+    "count": 25,
+    "relevant": 25,
+    "sample": [
+      {
+        "t": "Best of Shreya Ghoshal",
+        "a": "Shreya Ghoshal"
+      },
+      {
+        "t": "Maa Tumi - Single",
+        "a": "Shreya Ghoshal"
+      },
+      {
+        "t": "Mahiya - Single",
+        "a": "Badshah, Shreya Ghoshal & Hiten"
+      },
+      {
+        "t": "Tum Jo Mile Ho To (Lofi Mix) [From \"Riwayat\"] - Single",
+        "a": "Shreya Ghoshal & Shaan"
+      },
+      {
+        "t": "Dhola Ji (From \"Suryaa\") - Single",
+        "a": "Shreya Ghoshal, Javed Ali, Swaroop Khan & Madhubanti Bagchi"
+      }
+    ]
+  },
+  {
+    "name": "itunes_artist_shreya",
+    "ok": true,
+    "ms": 0,
+    "count": 5,
+    "sample": [
+      {
+        "name": "Shreya Ghoshal",
+        "id": 19715559
+      },
+      {
+        "name": "Shreya Ghoshal",
+        "id": 1742495684
+      },
+      {
+        "name": "Shreya Ghoshal",
+        "id": 1742495657
+      },
+      {
+        "name": "Shreya Ghoshal",
+        "id": 1742495619
+      },
+      {
+        "name": "Shreya Ghoshal",
+        "id": 1506298036
+      }
+    ]
+  },
+  {
+    "name": "mb_artist_shreya",
+    "ok": true,
+    "ms": 0,
+    "count": 1,
+    "sample": [
+      {
+        "name": "Shreya Ghoshal",
+        "id": "a8740949-50a8-4e71-8133-17d31b7cf69c",
+        "type": "Person"
+      }
+    ]
+  },
+  {
+    "name": "audius_shreya",
+    "ok": true,
+    "ms": 0,
+    "count": 10,
+    "relevant": 10,
+    "sample": [
+      {
+        "title": "Tu Thodi Der Aur Thehar Ja Female Version Ringtone by Shreya Ghoshal - AndroidMobilesZone (1)",
+        "artist": "Neer"
+      },
+      {
+        "title": "Tu Thodi Der Aur Thehar Ja Female Version Ringtone by Shreya Ghoshal - AndroidMobilesZone (1)",
+        "artist": "Neer"
+      },
+      {
+        "title": "03. Panga - Mika Singh & Shreya Ghoshal-(BDmuzik24.Com)",
+        "artist": "Tomi123"
+      },
+      {
+        "title": "Pal___%5BSlowed_And_Reverb%5D_-_Arijit_Singh___Shreya_Ghoshal___Lofi_Audio_Song___10_PM_LOFi(256k)",
+        "artist": "Usman1"
+      },
+      {
+        "title": "Pal___%5BSlowed_And_Reverb%5D_-_Arijit_Singh___Shreya_Ghoshal___Lofi_Audio_Song___10_PM_LOFi(256k)",
+        "artist": "Muhammad usman"
+      }
+    ]
+  },
+  {
+    "name": "jio_local",
+    "ok": false,
+    "ms": 5,
+    "error": "fetch failed"
+  }
+]

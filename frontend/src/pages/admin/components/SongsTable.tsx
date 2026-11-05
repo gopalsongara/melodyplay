@@ -53,7 +53,7 @@ const SongsTable = () => {
             <TableCell>
               <span className="inline-flex items-center gap-1 text-zinc-400">
                 <Calendar className="h-4 w-4" />
-                {song.createdAt.split("T")[0]}
+                {song.createdAt?.split("T")[0] || "—"}
               </span>
             </TableCell>
 

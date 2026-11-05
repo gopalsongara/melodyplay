@@ -1,25 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { usePlayerStore } from "@/stores/usePlayerStore";
-import type { Song } from "@/types";
+import type { PlayableTrack, Song } from "@/types";
 import { Pause, Play } from "lucide-react";
 
-const PlayButton = ({ song }: { song: Song }) => {
-  const {
-    isPlaying,
-    currentSong,
-    setCurrentSong,
-    togglePlay,
-    setShouldAutoplay,
-  } = usePlayerStore();
-  const isCurrentSong = currentSong?._id === song._id;
+const PlayButton = ({ song }: { song: Song | PlayableTrack }) => {
+  const { isPlaying, currentSong, setCurrentSong, togglePlay } =
+    usePlayerStore();
+  const songId = song._id || (song as PlayableTrack).id || "";
+  const isCurrentSong = (currentSong?._id || "") === songId;
 
   const handlePlay = () => {
     if (isCurrentSong) togglePlay();
-    else {
-      setCurrentSong(song);
-      setShouldAutoplay(true);
-    }
+    else setCurrentSong(song);
   };
+
   return (
     <Button
       size={"icon"}

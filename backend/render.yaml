@@ -1,0 +1,44 @@
+# Example Render Blueprint — review before applying.
+# Do NOT put secrets in this file; configure them in the Render dashboard.
+services:
+  - type: web
+    name: melodyplay-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: MONGODB_URI
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: SAYA_API_BASE_URL
+        sync: false
+      - key: JIOSAAVN_API_BASE_URL
+        # Cloud Jio sidecar — NEVER localhost on Airtel Cloud / Render
+        value: https://shnwazdev-jiosaavn-apii.vercel.app
+      - key: JIOSAAVN_AUTHORIZED
+        value: "true"
+      - key: JIOSAAVN_API_TIMEOUT_MS
+        value: "35000"
+      - key: JIOSAAVN_API_RETRIES
+        value: "3"
+      - key: SEARCH_PROVIDER_TIMEOUT_MS
+        value: "12000"
+      - key: SEARCH_PROVIDER_RETRIES
+        value: "2"
+      - key: JAMENDO_CLIENT_ID
+        sync: false
+      - key: JAMENDO_CLIENT_SECRET
+        sync: false

@@ -1,0 +1,1287 @@
+{
+  "generatedAt": "2026-11-04T16:43:05.234Z",
+  "queryCount": 17,
+  "avgLatencyMs": 1413,
+  "artistQueriesWithResults": 9,
+  "rows": [
+    {
+      "query": "Shreya Ghoshal",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 2,
+      "byProvider": {
+        "audius": 27,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 2180,
+          "error": "fetch failed",
+          "status": 502,
+          "circuitOpen": false
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1698
+        },
+        "apple": {
+          "ok": true,
+          "ms": 471
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "19715559",
+          "count": 50
+        }
+      },
+      "latencyMs": 2468,
+      "sample": [
+        {
+          "title": "Bahara (From \"I Hate Luv Storys\")",
+          "artist": "Shreya Ghoshal, Sona Mohapatra & Vishal & Shekhar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Saibo (From \"Shor in the City\")",
+          "artist": "Shreya Ghoshal, Tochi Raina & Sachin-Jigar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Sunn Raha Hai (Female Version)",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Rozana",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tujh Mein Rab Dikhta Hai - II",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Shreya Ghoshal songs",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 2,
+      "byProvider": {
+        "audius": 27,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 2180,
+          "error": "fetch failed",
+          "status": 502,
+          "circuitOpen": false
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1698
+        },
+        "apple": {
+          "ok": true,
+          "ms": 471
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "19715559",
+          "count": 50
+        }
+      },
+      "latencyMs": 2468,
+      "sample": [
+        {
+          "title": "Bahara (From \"I Hate Luv Storys\")",
+          "artist": "Shreya Ghoshal, Sona Mohapatra & Vishal & Shekhar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Saibo (From \"Shor in the City\")",
+          "artist": "Shreya Ghoshal, Tochi Raina & Sachin-Jigar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Sunn Raha Hai (Female Version)",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Rozana",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tujh Mein Rab Dikhta Hai - II",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Shreya Ghoshal albums",
+      "kind": "albums",
+      "detectedIntent": "ALBUM",
+      "total": 20,
+      "relevant": 20,
+      "unrelatedPct": 0,
+      "byProvider": {
+        "apple_artist_albums": 40
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 2071,
+          "error": "fetch failed",
+          "status": 502,
+          "circuitOpen": false
+        },
+        "apple_artist_albums": {
+          "ok": true,
+          "ms": 230
+        },
+        "musicbrainz_albums": {
+          "ok": false,
+          "ms": 1437,
+          "error": "MusicBrainz HTTP 503",
+          "status": 503,
+          "circuitOpen": false
+        }
+      },
+      "latencyMs": 2084,
+      "sample": [
+        {
+          "title": "Shreya Ghoshal: Best of Me",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "artwork": true
+        },
+        {
+          "title": "Shreya Ghoshal: All Time Telugu Hits",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "artwork": true
+        },
+        {
+          "title": "Shreya Ghoshal: Straight from the Heart",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "artwork": true
+        },
+        {
+          "title": "Silken Melodies Shreya Ghoshal",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "artwork": true
+        },
+        {
+          "title": "Best of Shreya Ghoshal",
+          "artist": "Shreya Ghoshal",
+          "provider": "apple",
+          "artwork": true
+        }
+      ]
+    },
+    {
+      "query": "Arijit Singh",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 5,
+      "byProvider": {
+        "audius": 40,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1680
+        },
+        "apple": {
+          "ok": true,
+          "ms": 364
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "484568188",
+          "count": 50
+        }
+      },
+      "latencyMs": 1946,
+      "sample": [
+        {
+          "title": "Tujhe Kitna Chahne Lage",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Phir Kabhi",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Yeh Fitoor Mera",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Roke Na Ruke Naina",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tera Yaar Hoon Main",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple",
+        "audius"
+      ]
+    },
+    {
+      "query": "Arjit Singh",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 5,
+      "byProvider": {
+        "audius": 40,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1443
+        },
+        "apple": {
+          "ok": true,
+          "ms": 117
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "484568188",
+          "count": 50
+        }
+      },
+      "latencyMs": 1698,
+      "sample": [
+        {
+          "title": "Tujhe Kitna Chahne Lage",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Phir Kabhi",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Yeh Fitoor Mera",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Roke Na Ruke Naina",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tera Yaar Hoon Main",
+          "artist": "Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple",
+        "audius"
+      ]
+    },
+    {
+      "query": "Sonu Nigam",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 3,
+      "byProvider": {
+        "audius": 7,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 921
+        },
+        "apple": {
+          "ok": true,
+          "ms": 104
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "18056658",
+          "count": 50
+        }
+      },
+      "latencyMs": 1154,
+      "sample": [
+        {
+          "title": "Ab Mujhe Raat Din",
+          "artist": "Sonu Nigam",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tanhayee",
+          "artist": "Sonu Nigam",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Deewana Tera",
+          "artist": "Sonu Nigam",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Saathiya",
+          "artist": "Sonu Nigam",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Is Kadar Pyar Hai Tumse",
+          "artist": "Sonu Nigam",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Kishore Kumar",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 3,
+      "byProvider": {
+        "audius": 9,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1092
+        },
+        "apple": {
+          "ok": true,
+          "ms": 131
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "14291581",
+          "count": 50
+        }
+      },
+      "latencyMs": 1693,
+      "sample": [
+        {
+          "title": "Mere Mehboob Qayamat Hogi, Pt. 1 (From \"Mr. X in Bombay\")",
+          "artist": "Kishore Kumar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Om Shanti Om",
+          "artist": "Kishore Kumar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Phoolon Ka Taron Ka, Pt. 2",
+          "artist": "Kishore Kumar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Aate Jate Khoobsurat Awara",
+          "artist": "Kishore Kumar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Chingari Koi Bhadke",
+          "artist": "Kishore Kumar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Lata Mangeshkar",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 2,
+      "byProvider": {
+        "audius": 6,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1459
+        },
+        "apple": {
+          "ok": true,
+          "ms": 88
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "14291575",
+          "count": 50
+        }
+      },
+      "latencyMs": 1701,
+      "sample": [
+        {
+          "title": "Ajib Dastan Hai Yeh (From \"Dil Apna Aur Preet Parai\")",
+          "artist": "Lata Mangeshkar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Mehndi Laga Ke Rakhna",
+          "artist": "Lata Mangeshkar & Udit Narayan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Ye Dil Tum Bin Lagta Nahin",
+          "artist": "Lata Mangeshkar & Mohd. Rafi",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Lag Ja Gale Se Phir (From \"Woh Kaun Thi\")",
+          "artist": "Lata Mangeshkar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tu Kitni Achhi Hai",
+          "artist": "Lata Mangeshkar",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Udit Narayan",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 4,
+      "byProvider": {
+        "audius": 37,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1453
+        },
+        "apple": {
+          "ok": true,
+          "ms": 116
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "18485031",
+          "count": 50
+        }
+      },
+      "latencyMs": 1746,
+      "sample": [
+        {
+          "title": "Ek Dilruba Hai",
+          "artist": "Udit Narayan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Aaye Ho Meri Zindagi Mein (Male Version)",
+          "artist": "Udit Narayan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Papa Kahte Hain",
+          "artist": "Udit Narayan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Ruk Ja O Dil Deewane",
+          "artist": "Udit Narayan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Main Yahaan Hoon",
+          "artist": "Udit Narayan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Sunidhi Chauhan",
+      "kind": "artist",
+      "detectedIntent": "ARTIST",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 2,
+      "byProvider": {
+        "audius": 3,
+        "apple": 40,
+        "apple_discography": 50
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 780
+        },
+        "apple": {
+          "ok": true,
+          "ms": 189
+        },
+        "apple_discography": {
+          "ok": true,
+          "artistId": "14291650",
+          "count": 50
+        }
+      },
+      "latencyMs": 1132,
+      "sample": [
+        {
+          "title": "Mere Sang",
+          "artist": "Sunidhi Chauhan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Dhoom Machale",
+          "artist": "Sunidhi Chauhan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Aaja Nachle",
+          "artist": "Sunidhi Chauhan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Aa Zara",
+          "artist": "Sunidhi Chauhan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Crazy Kiya Re",
+          "artist": "Sunidhi Chauhan",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple"
+      ]
+    },
+    {
+      "query": "Kesariya",
+      "kind": "song",
+      "detectedIntent": "SONG",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 12,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 718
+        },
+        "apple": {
+          "ok": true,
+          "ms": 204
+        }
+      },
+      "latencyMs": 726,
+      "sample": [
+        {
+          "title": "Kesariya (From \"Brahmastra\")",
+          "artist": "Pritam, Arijit Singh & Amitabh Bhattacharya",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Kesariya (Synthwave)",
+          "artist": "VDJ Fly & Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Kesariya (Punjabi Female Version)",
+          "artist": "Pritam, Raashi Sood & Ammy Gill",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Kesariya (Multilingual Mix)",
+          "artist": "Pritam & Snehdeep Singh Kalsi",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Kesariya (Punjabi Version)",
+          "artist": "Pritam & JAI DHIR",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple",
+        "audius"
+      ]
+    },
+    {
+      "query": "Tum Hi Ho",
+      "kind": "song",
+      "detectedIntent": "SONG",
+      "total": 20,
+      "relevant": 15,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 25,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 24,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 1068
+        },
+        "apple": {
+          "ok": true,
+          "ms": 655
+        }
+      },
+      "latencyMs": 1077,
+      "sample": [
+        {
+          "title": "Tum hi ho (feat. Rahul Shah & Adi Verma)",
+          "artist": "Shashwat Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tum Hi Ho",
+          "artist": "Mithoon & Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tum Hi Ho",
+          "artist": "Shahid Mallya",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Tum Hi Ho",
+          "artist": "Arv",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Tum Hi Ho (From \"Aashiqui 2\")",
+          "artist": "Gurbani Bhatia",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple",
+        "audius"
+      ]
+    },
+    {
+      "query": "Channa Mereya",
+      "kind": "song",
+      "detectedIntent": "SONG",
+      "total": 13,
+      "relevant": 13,
+      "uniqueRecordings": 13,
+      "unrelatedPct": 0,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 2,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 532
+        },
+        "apple": {
+          "ok": true,
+          "ms": 695
+        }
+      },
+      "latencyMs": 702,
+      "sample": [
+        {
+          "title": "Channa Mereya (Synthwave)",
+          "artist": "VDJ Fly, Snasty Music & Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Channa Mereya (Sped Up)",
+          "artist": "Pritam, Arijit Singh & Bollywood Sped Up",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Channa Mereya (feat. Kanha Kamboj) [Sufi Version]",
+          "artist": "Sagar Bhatia",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Channa Mereya",
+          "artist": "Pritam & Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Channa Mereya (From \"Ae Dil Hai Mushkil\")",
+          "artist": "Pritam & Arijit Singh",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple",
+        "audius"
+      ]
+    },
+    {
+      "query": "Believer",
+      "kind": "song",
+      "detectedIntent": "SONG",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 25,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 932
+        },
+        "apple": {
+          "ok": true,
+          "ms": 111
+        }
+      },
+      "latencyMs": 949,
+      "sample": [
+        {
+          "title": "Believer",
+          "artist": "J.Fla",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Believer",
+          "artist": "Anna Wolf",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Believer",
+          "artist": "Major Lazer & Showtek",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Believer (feat. Lil Wayne)",
+          "artist": "Imagine Dragons",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Believer",
+          "artist": "One Voice Children's Choir",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "apple",
+        "audius"
+      ]
+    },
+    {
+      "query": "Starboy",
+      "kind": "song",
+      "detectedIntent": "SONG",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 25,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 812
+        },
+        "apple": {
+          "ok": true,
+          "ms": 236
+        }
+      },
+      "latencyMs": 825,
+      "sample": [
+        {
+          "title": "Kill Baby { STARBOY NIEL}",
+          "artist": "Starboy niel",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "HABIBI GIRL { STARBOY NIEL } ",
+          "artist": "Starboy niel",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Starboy (feat. Daft Punk)",
+          "artist": "The Weeknd",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Starboy",
+          "artist": "Goom Gum",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        },
+        {
+          "title": "Starboy (feat. Johannes Weber)",
+          "artist": "Koni",
+          "provider": "apple",
+          "playbackType": "preview",
+          "isPreview": true
+        }
+      ],
+      "providerDiversity": [
+        "audius",
+        "apple"
+      ]
+    },
+    {
+      "query": "Hindi Sad Songs",
+      "kind": "mood",
+      "detectedIntent": "MOOD",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 8,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 687
+        },
+        "apple": {
+          "ok": true,
+          "ms": 110
+        }
+      },
+      "latencyMs": 710,
+      "sample": [
+        {
+          "title": "Wedding Songs ",
+          "artist": "Hindi Music",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "90s Old Hindi Songs 🥰 | Sad & Romantic Vibes",
+          "artist": "NFThunk",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Teri_Yaad_|_Satyajeet_Jena_|_Rajat_Parida_|_Official_Video_|_New_Hindi_Sad_Songs_2021(128k)",
+          "artist": "mukti",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Aashiquii Kaa Gum _ Sad Love Story _ Salman Ali Himesh Reshammiya _ New Hindi Sad Songs 2022(MP3_160K)",
+          "artist": "Md.Sofikul Islam Shuvo",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Aashiquii Kaa Gum _ Sad Love Story _ Salman Ali Himesh Reshammiya _ New Hindi Sad Songs 2022(MP3_160K)",
+          "artist": "Sofikul Islam",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        }
+      ],
+      "providerDiversity": [
+        "audius",
+        "apple"
+      ]
+    },
+    {
+      "query": "Bollywood Romantic Songs",
+      "kind": "mood",
+      "detectedIntent": "MOOD",
+      "total": 20,
+      "relevant": 20,
+      "uniqueRecordings": 20,
+      "unrelatedPct": 0,
+      "correctArtists": 0,
+      "byProvider": {
+        "audius": 22,
+        "apple": 25
+      },
+      "providerStatus": {
+        "jiosaavn": {
+          "ok": false,
+          "ms": 0,
+          "error": "circuit open for jiosaavn",
+          "status": 503,
+          "circuitOpen": true
+        },
+        "audius": {
+          "ok": true,
+          "ms": 907
+        },
+        "apple": {
+          "ok": true,
+          "ms": 133
+        }
+      },
+      "latencyMs": 934,
+      "sample": [
+        {
+          "title": "Atif Aslam Romantic Hits | Best Bollywood Songs Collection ❤️🎶",
+          "artist": "NFThunk",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Top_15_Bollywood_Romantic_Songs_💖_Female_Version_Songs",
+          "artist": "NFThunk",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "BOLLYWOOD_ROMANTIC_FEMALE_VERSION_SONGS_MOST_ROMANTIC SONGS",
+          "artist": "NFThunk",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "Bollywood_Songs_2022__Hindi_Songs__Romantic_Love__song",
+          "artist": "NFThunk",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        },
+        {
+          "title": "90s Latest Hindi Romantic Songs | Evergreen Bollywood Love Hits",
+          "artist": "NFThunk",
+          "provider": "audius",
+          "playbackType": "authorized_full_stream",
+          "isPreview": false
+        }
+      ],
+      "providerDiversity": [
+        "audius",
+        "apple"
+      ]
+    }
+  ]
+}

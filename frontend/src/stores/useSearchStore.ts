@@ -23,7 +23,7 @@ export const useSearchStore = create<SearchStore>()(
       searchHistory: [],
       activeFilters: ["songs", "albums"],
 
-      // Add search query to history (max 3 items)
+      // Add search query to history (keep recent interests for home personalization)
       addToHistory: (query) => {
         const trimmedQuery = query.trim();
         if (!trimmedQuery) return;
@@ -38,7 +38,7 @@ export const useSearchStore = create<SearchStore>()(
           const newHistory = [
             { query: trimmedQuery, timestamp: Date.now() },
             ...filtered,
-          ].slice(0, 3); // Keep only 3 most recent
+          ].slice(0, 10);
 
           return { searchHistory: newHistory };
         });

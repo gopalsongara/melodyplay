@@ -1,4 +1,5 @@
 import { axiosInstance } from "@/lib/axios";
+import { getSocketBaseUrl } from "@/lib/apiConfig";
 import type { Message, User } from "@/types";
 import { create } from "zustand";
 import { io } from "socket.io-client";
@@ -22,10 +23,7 @@ interface ChatStore {
   setSelectedUser: (user: User | null) => void;
 }
 
-const baseURL =
-  import.meta.env.MODE === "development" ? "http://localhost:8080" : "/";
-
-const socket = io(baseURL, {
+const socket = io(getSocketBaseUrl(), {
   autoConnect: false, // only connect if user is authenticated
   withCredentials: true,
 });

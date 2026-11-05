@@ -1,11 +1,13 @@
 import { Server } from "socket.io";
 import { Message } from "../models/message.model.js";
+import { corsOriginCallback } from "./corsOrigins.js";
 
 export const initializeSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: corsOriginCallback,
       credentials: true,
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     },
   });
 

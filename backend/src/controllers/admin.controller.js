@@ -1,9 +1,20 @@
 import { Song } from "../models/song.model.js";
 import { Album } from "../models/album.model.js";
-import cloudinary from "../lib/cloudinary.js";
+import cloudinary, { isCloudinaryConfigured } from "../lib/cloudinary.js";
 import { parseFile, parseBuffer } from "music-metadata";
 
+const assertCloudinary = () => {
+  if (!isCloudinaryConfigured) {
+    const error = new Error(
+      "Cloudinary is not configured. Admin uploads require CLOUDINARY_* env vars.",
+    );
+    error.status = 503;
+    throw error;
+  }
+};
+
 const uploadToCloudinary = async (file, options = {}) => {
+  assertCloudinary();
   try {
     let uploadSource;
     let filePath;
@@ -252,15 +263,25 @@ export const deleteSong = async (req, res, next) => {
 
 export const createAlbum = async (req, res, next) => {
   try {
-    const { title, artist, releaseDate } = req.body;
-    const imageFile = req.files;
+    const { title, artist } = req.body;
+    const releaseDate =
+      req.body.releaseDate || req.body.releaseYear || new Date().getFullYear();
+    const imageFile = req.files?.imageFile;
 
-    const imageUrl = await uploadToCloudinary(imageFile);
+    if (!imageFile) {
+      return res.status(400).json({ message: "Please upload an album image" });
+    }
+
+    const imageResult = await uploadToCloudinary(imageFile, {
+      folder: "album_covers",
+      resource_type: "image",
+    });
+
     const album = new Album({
       title,
       artist,
-      imageUrl,
-      releaseDate,
+      imageUrl: imageResult.fileUrl || imageResult,
+      releaseDate: Number(releaseDate),
     });
 
     await album.save();
